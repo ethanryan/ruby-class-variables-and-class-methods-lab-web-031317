@@ -45,15 +45,15 @@ class Song
 
   def self.genre_count #self before genres makes this a class method
     new_hash = {}
-    @count = 1
+    count = 1
 
     @@genres.each do |each_genre|
       if new_hash[each_genre] #if new_hash[each_genre] exists, meaning it has a value of at least 1...
-        new_hash[each_genre] = @count #add 1 more to its count
+        new_hash[each_genre] = count #add 1 more to its count
       elsif new_hash[each_genre] == nil #if new_hash[each_genre] returns nil, meaning it has no value...
         new_hash[each_genre] = 1 #set its value to 1
       end #end if else
-      @count += 1
+      count += 1
     end #end loop
     new_hash
   end #end method
@@ -61,15 +61,15 @@ class Song
 
   def self.artist_count #self before genres makes this a class method
     new_hash = {}
-    @count = 1
+    count = 1
 
     @@artists.each do |each_genre|
       if new_hash[each_genre] #if new_hash[each_genre] exists, meaning it has a value of at least 1...
-        new_hash[each_genre] = @count #add 1 more to its count
+        new_hash[each_genre] = count #add 1 more to its count
       elsif new_hash[each_genre] == nil #if new_hash[each_genre] returns nil, meaning it has no value...
         new_hash[each_genre] = 1 #set its value to 1
       end #end if else
-      @count += 1
+      count += 1
     end #end loop
     new_hash
   end #end method
